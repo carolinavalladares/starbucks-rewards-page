@@ -1,0 +1,304 @@
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+// Mixins
+@mixin Flex($direction, $justufy, $align) {
+  display: flex;
+  justify-content: $justufy;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: rgb(43, 43, 43);
+}
+html,
+body {
+  height: 100%;
+}
+
+// Header
+header {
+  background-color: #f3f1e7;
+  padding: 0 40px;
+  height: 100px;
+  @include Flex(row, space-between, center);
+  .logo {
+    width: 70px;
+  }
+  .header-nav {
+    min-width: 90%;
+    height: 100%;
+    @include Flex(row, space-between, center);
+  }
+  .nav-links {
+    @include Flex(row, space-around, center);
+    width: 30%;
+    height: 100%;
+    list-style: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    li {
+      cursor: pointer;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      border-bottom: 7px solid #f3f1e7;
+      &:hover {
+        color: #008248;
+      }
+    }
+    li:nth-child(2) {
+      border-bottom: 7px solid #008248;
+    }
+  }
+
+  .login-container {
+    height: 100%;
+    min-width: 30%;
+    @include Flex(row, space-between, center);
+
+    a {
+      text-decoration: none;
+      font-size: 1.1rem;
+      color: black;
+      font-weight: 500;
+      &:hover {
+        color: #008248;
+      }
+    }
+    .signin {
+      margin: 0 10px;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+      }
+    }
+    .join-now-header {
+      color: #f3f1e7;
+      background-color: black;
+      &:hover {
+        background-color: rgba(black, 0.8);
+      }
+    }
+    .btn {
+      font-size: 1rem;
+      padding: 0.3em 0.5em;
+      border-radius: 20px;
+      outline: none;
+      border: 1.5px solid black;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+  }
+}
+// Fixed Bar
+.fixed-bar {
+  background-color: #1e3932;
+  text-transform: uppercase;
+  font-weight: 900;
+  height: 40px;
+  color: #f3f1e7;
+  display: flex;
+  align-items: center;
+  padding: 25px 150px;
+  letter-spacing: 1px;
+
+  &.fix-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+}
+
+// Banner
+.banner {
+  height: 100%;
+  padding-left: 50px;
+  background-color: #d4e9e2;
+  @include Flex(column, center, flex-start);
+  h1 {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    width: 250px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  p {
+    width: 300px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+  }
+  .btn {
+    font-size: 1rem;
+    padding: 0.4em 0.8em;
+    border-radius: 20px;
+    font-weight: 500;
+    outline: none;
+    border: 1.5px solid #008248;
+    background-color: #008248;
+    color: #f3f1e7;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      background-color: rgba(#008248, 0.8);
+    }
+  }
+}
+// Getting Started Section
+.getting-started {
+  background-color: white;
+  height: 90%;
+  @include Flex(column, center, center);
+  h2 {
+    font-size: 1.7rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  p {
+    text-align: center;
+  }
+  .gs-item-container {
+    @include Flex(row, space-around, center);
+    padding: 50px 150px;
+    gap: 40px;
+  }
+
+  .gs-item-text {
+    text-align: center;
+    line-height: 25px;
+    h3 {
+      margin-bottom: 20px;
+    }
+  }
+  .num {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #008248;
+    border: 2px solid #008248;
+    margin-inline: auto;
+    @include Flex(row, center, center);
+  }
+}
+
+// Tabs
+.tab-section {
+  padding-top: 30px;
+  background-color: #f3f1e7;
+  height: 70%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h2 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .tabs {
+    text-align: center;
+  }
+  .tab-btn {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-inline: 0;
+    padding: 1em 2em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-bottom: 7px solid #f3f1e7;
+
+    &.active-tab {
+      border-bottom: 7px solid #008248;
+    }
+  }
+
+  .tab-item-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d4e9e2;
+    height: 400px;
+  }
+  .tab-item {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    animation: fade-effect 1s;
+    @keyframes fade-effect {
+      from {
+        opacity: 0%;
+      }
+      to {
+        opacity: 100%;
+      }
+    }
+    .tab-item-img {
+      img {
+        width: 400px;
+      }
+    }
+    .item-text {
+      width: 400px;
+      // margin: auto;
+    }
+  }
+}
+
+// Extras Section
+.extras-section {
+  text-align: center;
+  height: 70%;
+  padding: 50px;
+  @include Flex(column, space-between, center);
+  .extras-text {
+    width: 800px;
+    height: 200px;
+    margin-bottom: 50px;
+    @include Flex(column, space-around, center);
+    line-height: 30px;
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+  .extra-container {
+    @include Flex(row, space-around, center);
+    gap: 30px;
+  }
+  .extra-item {
+    text-align: center;
+    height: 300px;
+    @include Flex(column, space-between, center);
+    width: 400px;
+    img {
+      width: 120px;
+    }
+    .text-extra {
+      height: 200px;
+      line-height: 30px;
+      font-weight: 500;
+      @include Flex(column, space-around, center);
+    }
+  }
+  a {
+    color: #008248;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/Starbucks-Logo-small.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/rewards.css" />
+
+    <!-- JS -->
+    <script src="../js/rewards.js" defer></script>
+
+    <title>Starbucks | Rewards</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="../images/Starbucks-Logo-small.png" alt="logo" />
+      <nav class="header-nav">
+        <ul class="nav-links">
+          <li>Menu</li>
+          <li>Rewards</li>
+          <li>Gift Cards</li>
+        </ul>
+
+        <div class="login-container">
+          <a href="#">Find a store</a>
+          <div>
+            <button class="btn signin">Sign in</button>
+            <button class="btn join-now-header">Join Now</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="fixed-bar">Starbucks Rewards</div>
+    <section class="banner">
+      <h1>Free Coffee is a Tap Away</h1>
+      <p>Join now to start earning Rewards.</p>
+      <button class="btn join-now-banner">Join Now</button>
+    </section>
+    <section class="getting-started">
+      <h2>Getting Started is Easy</h2>
+      <p>Earn Stars and get rewarded in a few easy steps.</p>
+      <div class="gs-item-container">
+        <div class="gs-item">
+          <div class="num">1</div>
+          <div class="gs-item-text">
+            <h3>Create an account</h3>
+            <p>
+              To get started, join now. You can also join in the app to get
+              access to the full range of Starbucks® Rewards benefits.
+            </p>
+          </div>
+        </div>
+        <div class="gs-item">
+          <div class="num">2</div>
+          <div class="gs-item-text">
+            <h3>Order and pay how you’d like</h3>
+            <p>
+              Use cash, credit/debit card or save some time and pay right
+              through the app. You’ll collect Stars all ways. Learn how
+            </p>
+          </div>
+        </div>
+        <div class="gs-item">
+          <div class="num">3</div>
+          <div class="gs-item-text">
+            <h3>Earn Stars, get Rewards</h3>
+            <p>
+              As you earn Stars, you can redeem them for Rewards—like free food,
+              drinks, and more. Start redeeming with as little as 25 Stars!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="tab-section">
+      <h2>Get your favorites for free</h2>
+      <div class="tab-container">
+        <div class="tabs">
+          <button
+            class="tab-btn active-tab"
+            onclick="showContent(event,'first')"
+          >
+            25
+          </button>
+          <button class="tab-btn" onclick="showContent(event,'second')">
+            50
+          </button>
+          <button class="tab-btn" onclick="showContent(event,'third')">
+            150
+          </button>
+          <button class="tab-btn" onclick="showContent(event,'fourth')">
+            200
+          </button>
+          <button class="tab-btn" onclick="showContent(event,'fifth')">
+            400
+          </button>
+        </div>
+        <div class="tab-item-container">
+          <div class="tab-item default" id="first">
+            <div class="tab-item-img">
+              <img src="../images/first tab.webp" alt="" />
+            </div>
+            <div class="item-text">
+              <h3>Customize your drink</h3>
+              <p>
+                Make your drink just right with an extra espresso shot, dairy
+                substitute or a dash of your favorite syrup.
+              </p>
+            </div>
+          </div>
+          <div class="tab-item" id="second">
+            <div class="tab-item-img">
+              <img src="../images/second tab.webp" alt="" />
+            </div>
+            <div class="item-text">
+              <h3>Brewed hot coffee, bakery item or hot tea</h3>
+              <p>
+                Pair coffee cake or an almond croissant with your fresh cup of
+                hot brew.
+              </p>
+            </div>
+          </div>
+          <div class="tab-item" id="third">
+            <div class="tab-item-img">
+              <img src="../images/third tab.webp" alt="" />
+            </div>
+            <div class="item-text">
+              <h3>Handcrafted drink, hot breakfast or parfait</h3>
+              <p>
+                Have a really good morning with a breakfast sandwich, oatmeal or
+                your favorite drink.
+              </p>
+            </div>
+          </div>
+          <div class="tab-item" id="fourth">
+            <div class="tab-item-img">
+              <img src="../images/fourth tab.webp" alt="" />
+            </div>
+            <div class="item-text">
+              <h3>Salad, sandwich or protein box</h3>
+              <p>
+                Nourish your day with a hearty Chipotle Chicken Wrap or Eggs &
+                Cheese Protein Box.
+              </p>
+            </div>
+          </div>
+          <div class="tab-item" id="fifth">
+            <div class="tab-item-img">
+              <img src="../images/fifth tab.webp" alt="" />
+            </div>
+            <div class="item-text">
+              <h3>Select merchandise or at-home coffee</h3>
+              <p>
+                Take home a signature cup, a bag of coffee or your choice of
+                select coffee accessories.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="extras-section">
+      <div class="extras-text">
+        <h2>Endless Extras</h2>
+        <p>
+          Joining Starbucks® Rewards means unlocking access to exclusive
+          benefits. Say hello to easy ordering, tasty Rewards and—yes, free
+          coffee.
+        </p>
+      </div>
+
+      <div class="extra-container">
+        <div class="extra-item">
+          <img src="../images/fun-freebies.webp" alt="" />
+          <div class="text-extra">
+            <h3>Fun freebies</h3>
+            <p>
+              Not only can you earn free coffee, look forward to a birthday
+              treat plus coffee and tea refills.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+        <div class="extra-item">
+          <img src="../images/order-and-pay-ahead.webp" alt="" />
+          <div class="text-extra">
+            <h3>Order & pay ahead</h3>
+            <p>
+              Enjoy the convenience of in-store, curbside or drive-thru pickup
+              at select stores.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+        <div class="extra-item">
+          <img src="../images/get-to-free-faster.webp" alt="" />
+          <div class="text-extra">
+            <h3>Get to free faster</h3>
+            <p>
+              Earn Stars even quicker with Bonus Star challenges, Double Star
+              Days and exciting games.
+            </p>
+            <a href="#">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
